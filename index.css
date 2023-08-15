@@ -1,0 +1,25 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+canvas {
+    border: 3px solid black;
+    border-radius: 30px;
+    height: calc(100vh - 10px);
+    width: 80%;
+    padding-top: 3px;
+}
+
+.sidebar {
+    width: 20%;
+    height: 100vh;
+    background-color: lightgray;
+    padding-left: 30px;
+}
