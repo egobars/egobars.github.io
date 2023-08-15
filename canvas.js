@@ -16,8 +16,6 @@ window.onload = function() {
     a_canvas.width = 5000;
     a_canvas.height = 5000;
 
-    ctx.fillRect(-100, -100, 100, 100);
-
     ctx.scale(dpr, dpr);
 
     // canvas.style.width = `${rect.width}px`;
@@ -127,6 +125,21 @@ window.onload = function() {
             a_ctx.scale(scale, scale);
             ctx.drawImage(a_canvas, x_offset, y_offset);
             a_ctx.restore();
+
+            if (x_offset > 0) {
+                ctx.fillStyle = "rgb(211, 211, 211)";
+                ctx.fillRect(0, 0, x_offset, canvas.height / scale);
+            }
+            if (y_offset > 0) {
+                ctx.fillStyle = "rgb(211, 211, 211)";
+                ctx.fillRect(0, 0, canvas.width / scale, y_offset);
+            }
+            if ((x_offset + 5000) * scale < canvas.width) {
+                console.log('a');
+                ctx.fillStyle = "rgb(211, 211, 211)";
+                ctx.fillRect((x_offset * scale + 5000) / scale, 0, canvas.width - (x_offset * scale + 5000) / scale, canvas.height / scale);
+            }
+
             ctx.restore();
         }
 
@@ -166,6 +179,16 @@ window.onload = function() {
         a_ctx.scale(scale, scale);
         ctx.drawImage(a_canvas, x_offset, y_offset);
         a_ctx.restore();
+
+        if (x_offset > 0) {
+            ctx.fillStyle = "rgb(211, 211, 211)";
+            ctx.fillRect(0, 0, x_offset, canvas.height / scale);
+        }
+        if (y_offset > 0) {
+            ctx.fillStyle = "rgb(211, 211, 211)";
+            ctx.fillRect(0, 0, canvas.width / scale, y_offset);
+        }
+
         ctx.restore();
     });
 }
