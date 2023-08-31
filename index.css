@@ -7,11 +7,11 @@ body {
     min-height: 100%;
     width: 100%;
     display: flex;
+    font-family: 'Corbel', sans-serif;
 }
 
 canvas {
     border: 3px solid black;
-    border-radius: 30px;
     height: calc(100vh - 10px);
     width: 80%;
     padding-top: 3px;
@@ -19,7 +19,195 @@ canvas {
 
 .sidebar {
     width: 20%;
+    min-width: 380px;
     height: 100vh;
     background-color: lightgray;
-    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+}
+
+.sidebar h1 {
+    padding-left: 10px;
+}
+
+.width-panel {
+    padding-top: 30px;
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.slider {
+    background-color: darkgrey;
+    height: 20px;
+    width: 50%;
+}
+
+.stripe {
+    background-color: gray;
+    height: 20px;
+    width: 20%;
+}
+
+#stripe-transparency {
+    width: 100%;
+}
+
+#color {
+    height: 200px;
+    width: 200px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+}
+
+#color::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+.color-panel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons-panel {
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.tools-button {
+    background: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 75px;
+    width: 75px;
+    cursor: pointer;
+}
+
+.tools-button:hover {
+    border: 2px solid gray !important;
+}
+
+.tools-button:active {
+    background-color: darkgrey;
+}
+
+#brush {
+    border: 2px solid black;
+}
+
+.size-panel {
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.size-panel form {
+    display: flex;
+    gap: 10px;
+}
+
+.size-panel form input {
+    background: none;
+    border: 1px solid gray;
+    font-size: 15px;
+}
+
+.size-panel form button {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: none;
+    border: none;
+    box-shadow: 0 0 0 1px gray inset;
+    cursor: pointer;
+}
+
+.size-panel form button:hover {
+    box-shadow: 0 0 0 2px gray inset;
+}
+
+.size-panel form button:active {
+    background-color: darkgrey;
+}
+
+.template-panel {
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: calc(100% - 20px);
+}
+
+.template {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+}
+
+.template-label {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: darkgrey;
+    font-size: 21px;
+    font-weight: normal;
+    box-shadow: 0 0 0 1px gray inset;
+    border-radius: 5px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.template-label:hover {
+    box-shadow: 0 0 0 2px gray inset;
+}
+
+.template-label:active {
+    background-color: gray;
+}
+
+.download-panel {
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: calc(100% - 20px);
+}
+
+.download-button {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    background-color: darkgrey;
+    border: none;
+    box-shadow: 0 0 0 1px gray inset;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.download-button:hover {
+    box-shadow: 0 0 0 2px gray inset;
+}
+
+.download-button:active {
+    background-color: gray;
 }

@@ -3,12 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://kit.fontawesome.com/42d28ff209.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="canvas.js"></script>
     <title>Drawery</title>
 </head>
 <body>
     <div class="sidebar">
         <h1>Drawery</h1>
+        <div class="color-panel">
+            <input type="color" id="color" value="#c80000" />
+        </div>
+        <div class="width-panel">
+            <span>Width</span>
+            <div class="slider" id="slider">
+                <div class="stripe" id="stripe"></div>
+            </div>
+        </div>
+        <div class="width-panel">
+            <span>Transparency</span>
+            <div class="slider" id="slider-transparency">
+                <div class="stripe" id="stripe-transparency"></div>
+            </div>
+        </div>
+        <div class="buttons-panel">
+            <button class="tools-button" id="brush"><i class="fa-solid fa-paintbrush fa-2xl"></i></button>
+            <button class="tools-button" id="eraser"><i class="fa-solid fa-eraser fa-2xl"></i></button>
+            <button class="tools-button" id="bucket"><i class="fa-solid fa-fill-drip fa-2xl"></i></button>
+            <button class="tools-button" id="undo"><i class="fa-solid fa-rotate-left fa-2xl"></i></button>
+        </div>
+        <div class="size-panel">
+            <span>Canvas size</span>
+            <form>
+                <input id="size-width" type="number" min="200" max="5000" value="5000" />
+                <input id="size-height" type="number" min="200" max="5000" value="5000" />
+                <button id="size-submit"><i class="fa-solid fa-check"></i></button>
+            </form>
+        </div>
+        <div class="template-panel">
+            <input type="file" id="template" class="template">
+            <label for="template" class="template-label">Select template</label>
+        </div>
+        <div class="download-panel">
+            <button id="download" class="download-button">Download</button>
+        </div>
     </div>
     <canvas id="canvas" oncontextmenu="return false;"></canvas>
 </body>
